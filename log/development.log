@@ -129,3 +129,238 @@ Completed 200 OK in 419ms (Views: 411.2ms | ActiveRecord: 0.2ms)
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for ::1 at 2018-11-04 10:13:52 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 21ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2018-11-04 10:14:17 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 246ms (Views: 242.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-11-04 10:14:21 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=Let%27s+see+if+this+posts.&post%5Bdescription%5D=Will+we+see+this+at+all%3F" for ::1 at 2018-11-04 10:15:07 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"Let's see if this posts.", "description"=>"Will we see this at all?"}}
+  Rendered posts/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=Let%27s+see+if+this+posts.&post%5Bdescription%5D=Will+we+see+this+at+all%3F" for ::1 at 2018-11-04 10:17:31 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"Let's see if this posts.", "description"=>"Will we see this at all?"}}
+  Rendered posts/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=Let%27s+see+if+this+posts.&post%5Bdescription%5D=well+well+well" for ::1 at 2018-11-04 10:17:40 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"Let's see if this posts.", "description"=>"well well well"}}
+  Rendered posts/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=Let%27s+see+if+this+posts.&post%5Bdescription%5D=well+well+well" for ::1 at 2018-11-04 10:17:51 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"Let's see if this posts.", "description"=>"well well well"}}
+  Rendered posts/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=hmm+&post%5Bdescription%5D=ok+this+is+weird" for ::1 at 2018-11-04 10:17:58 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"hmm ", "description"=>"ok this is weird"}}
+  Rendered posts/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=hmm+&post%5Bdescription%5D=ok+this+is+weird" for ::1 at 2018-11-04 10:32:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"hmm ", "description"=>"ok this is weird"}}
+  Rendered posts/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/kenwang90/Flatiron/Mod_2/rails-form_tag-readme-dumbo-web-100818/app/views/posts/new.html.erb:12: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/posts/new.html.erb:12: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.6ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=hmm+&post%5Bdescription%5D=ok+this+is+weird" for ::1 at 2018-11-04 10:32:40 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"hmm ", "description"=>"ok this is weird"}}
+  Rendered posts/new.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/kenwang90/Flatiron/Mod_2/rails-form_tag-readme-dumbo-web-100818/app/views/posts/new.html.erb:12: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/posts/new.html.erb:12: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.2ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=hmm+&post%5Bdescription%5D=ok+this+is+weird" for ::1 at 2018-11-04 10:32:41 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"hmm ", "description"=>"ok this is weird"}}
+  Rendered posts/new.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/kenwang90/Flatiron/Mod_2/rails-form_tag-readme-dumbo-web-100818/app/views/posts/new.html.erb:12: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/posts/new.html.erb:12: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.2ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=hmm+&post%5Bdescription%5D=ok+this+is+weird" for ::1 at 2018-11-04 10:33:11 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"hmm ", "description"=>"ok this is weird"}}
+  Rendered posts/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 190ms (Views: 189.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=hmm+&post%5Bdescription%5D=ok+this+is+weird" for ::1 at 2018-11-04 10:34:14 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"hmm ", "description"=>"ok this is weird"}}
+  Rendered posts/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=hmm+&post%5Bdescription%5D=ok+this+is+weird" for ::1 at 2018-11-04 10:34:14 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"hmm ", "description"=>"ok this is weird"}}
+  Rendered posts/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-11-04 10:34:21 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9LCfvo/ywzT0znHkmbkg+CttgpoHIjOUdYuTzdGHlJyRK++rmyTroaz8RwVgnyQPH5zqTmFaRWaNB9q3AEqPCQ==", "post"=>{"title"=>"hmm ", "description"=>"so hungry"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "hmm "], ["description", "so hungry"], ["created_at", "2018-11-04 15:34:21.944093"], ["updated_at", "2018-11-04 15:34:21.944093"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 14ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/posts" for ::1 at 2018-11-04 10:34:21 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for ::1 at 2018-11-04 10:34:36 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9LCfvo/ywzT0znHkmbkg+CttgpoHIjOUdYuTzdGHlJyRK++rmyTroaz8RwVgnyQPH5zqTmFaRWaNB9q3AEqPCQ==", "post"=>{"title"=>"Shuo", "description"=>"this is like twitter"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Shuo"], ["description", "this is like twitter"], ["created_at", "2018-11-04 15:34:36.900046"], ["updated_at", "2018-11-04 15:34:36.900046"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/posts" for ::1 at 2018-11-04 10:34:36 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=hmm+&post%5Bdescription%5D=ok+this+is+weird" for ::1 at 2018-11-04 10:35:49 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"hmm ", "description"=>"ok this is weird"}}
+  Rendered posts/new.html.erb within layouts/application (22.5ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/kenwang90/Flatiron/Mod_2/rails-form_tag-readme-dumbo-web-100818/app/views/posts/new.html.erb:11: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/posts/new.html.erb:11: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.6ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=hmm+&post%5Bdescription%5D=ok+this+is+weird" for ::1 at 2018-11-04 10:35:57 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"hmm ", "description"=>"ok this is weird"}}
+  Rendered posts/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=hmm+&post%5Bdescription%5D=ok+this+is+weird" for ::1 at 2018-11-04 10:36:18 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"hmm ", "description"=>"ok this is weird"}}
+  Rendered posts/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-11-04 10:36:25 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kAE9iLqZOfW/SnllCi5Qf7oolhv51G5a8/5xnVoPS4r1mk2drk8RYOd4T4TzCFSIjtn+z5+sGKgLcjjni8JQHw==", "post"=>{"title"=>"ken", "description"=>"i'm hungry right now"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ken"], ["description", "i'm hungry right now"], ["created_at", "2018-11-04 15:36:25.275458"], ["updated_at", "2018-11-04 15:36:25.275458"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 3ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/posts" for ::1 at 2018-11-04 10:36:25 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=hmm+&post%5Bdescription%5D=ok+this+is+weird" for ::1 at 2018-11-04 10:37:06 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"hmm ", "description"=>"ok this is weird"}}
+  Rendered posts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-11-04 10:37:08 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E5l0LPBW34fl97NaY87ISfKPn68mCaIsebWblyROmsJ2AgQ55ID3Er3Fhbua6My+xn73e0Bx1N6BOdLt9YOBVw=="}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/posts_controller.rb:10:in `create'
+
+
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/kenwang90/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.3ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=hmm+&post%5Bdescription%5D=ok+this+is+weird" for ::1 at 2018-11-04 10:37:18 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"hmm ", "description"=>"ok this is weird"}}
+  Rendered posts/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 18.0ms | ActiveRecord: 0.0ms)
