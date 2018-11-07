@@ -1,0 +1,30 @@
+The new page
+<br></br>
+
+<%= form_tag posts_path do %>
+  <label>Post title:</label><br>
+    <%= text_field_tag :'post[title]' %><br>
+
+  <label>Post description:</label><br>
+    <%= text_area_tag :'post[description]' %><br>
+
+  <%= submit_tag "Submit Post" %>
+<% end %>
+
+<!-- <form action="<%= posts_path %>" method="POST">
+  <label>Post title:</label><br>
+  <input type="text" id="post_title" name="post[title]"><br>
+
+  <label>Post description:</label><br>
+  <textarea id="post_description" name="post[description]"></textarea><br>
+
+  <%= form_tag posts_path do %>
+  <%= params.inspect %><br>
+  <input type="submit" value="Submit Post">
+  <% end %>
+</form> -->
+
+
+<!-- <%= hidden_field_tag :authenticity_token, form_authenticity_token %> -->
+<!-- <form action="<%= posts_path %>"> -->
+  <!-- <form action="<%= posts_path %>" method="POST"> -->
